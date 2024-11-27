@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web thu âm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Web thu âm giọng nói</h1>
+    </header>
+
+    <main>
+      <div class="text-container">
+        <h2>Văn bản cần đọc</h2>
+        <p id="random-text">Nhấn "Tạo văn bản" để bắt đầu!</p>
+        <button onclick="generateRandomText()">Tạo văn bản mới</button>
+      </div>
+
+      <div class="recorder-container">
+        <h2>Thu âm giọng nói</h2>
+        <button id="record-btn" onclick="toggleRecording()">Bắt đầu thu âm</button>
+        <p id="status">Trạng thái: Đang chờ...</p>
+        <audio id="audio-playback" controls hidden></audio>
+        <button id="save-btn" onclick="uploadAudio()" hidden>Lưu file lên Google Drive</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
